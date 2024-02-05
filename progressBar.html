@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+	<title>
+		PROGRESS BAR
+	</title>
+	<style type="text/css">
+		
+		.ab1{
+			position: relative;
+			display: block;
+			padding: 5px;
+			font-size: 16px;
+			line-height: 16px;
+			border-radius: 30px;
+			background-color: rgba(0,0,0,0.1);
+			box-shadow: inset 0 1px 2px rgba(0,0,0,0.25), 0 1px rgba(255,255,255,0.8);
+		}
+		.ab1 span{
+position: relative;
+display: inline-block;
+vertical-align: middle;
+height: 20px;
+border-radius: 10px 0 0 10px;
+overflow: hidden;
+background-color: #f56982;
+background-size: 100%;
+background-image: linear-gradient(to bottom,#f2395a,#b90c2b);
+animation: pb-1 4s infinite linear;
+		}
+		.ab1 span::after {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+content: "";
+background-size: 100%;
+background-image: linear-gradient(45deg,#fff 25%,
+	rgba(0,0,0,0) 25%,
+	rgba(0,0,0,0) 50%,
+	#fff 50%,
+	#fff 75%,
+	rgba(0,0,0,0) 75%,
+	rgba(0,0,0,0)); 
+background-size: 30px 30px;
+opacity: 0.3;
+animation: pba-1 0.5s infinite linear;
+		}
+		@keyframes pb-1{
+			0%{
+				width: 20%;
+			}
+			80%{
+				width: 85%
+			}
+			/*100%{
+				width: 0%
+			}*/
+		}
+		@keyframes pba-1{
+			0%{
+				background-position: 0 100%;
+			}
+			100%{
+				background-position: 40px 100%;
+			}
+		}
+
+		.ab2{
+			position: relative;
+			display: block;
+			font-size: 16px;
+			line-height: 16px;
+			background: rgba(0,0,0,0.1);
+
+			box-shadow: inset 0 1px 2px rgba(0,0,0,0.25), 0 1px 
+			rgba(255,255,255,0.8);
+		}
+		.ab2 span{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	height: 20px;
+	background-color: #00e6e7;
+	background-size: 100%;
+	background-image: linear-gradient(to bottom,#00b3b4,#008081);
+	
+	animation: pb-2 6s infinite ease;
+}
+
+	.ab2 span::before {
+	position: absolute;
+	right: 0;
+	bottom: 100%;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-right-width: 0;
+	border-bottom-width: 0;
+	border-top-color: rgba(0,0,0,1);
+	content: "";
+}
+
+		.ab2 span::after {
+	position: absolute;
+	right: 0;
+bottom: calc(100% + 5px);
+z-index: 1;
+display: inline-block;
+content: attr(data-label);
+padding: 5px;
+border-radius: 3px;
+font-size: 0.8em;
+background-color: rgba(0,0,0,1);
+color: #fff;
+}
+		@keyframes pb-2{
+	0%{
+		width: 0px;
+	}
+	100%{
+		width: 100%;
+	}
+}
+
+	</style>
+</head>
+<body>
+	<h4>
+	example 1....</h4>
+
+<div class="ab1">
+	<span style="width: 60%"></span>
+</div>
+<h4>
+	example 2....</h4>
+
+<div class="ab2">
+	<span data-label="Loading"></span>
+</div>
+</body>
+</html>

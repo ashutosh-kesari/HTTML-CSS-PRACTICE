@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+    	
+    	button{
+    border-radius: 2px;
+    font-size: 0.9rem;
+    padding: 6x 12px;
+font-size: 2em;
+
+}
+.b1{
+   /* -moz-box-shadow: inset  0 1px 0 0 #4d73bf;
+    -webkit-box-shadow: inset  0 1px 0 0 #4d73bf;*/
+   box-shadow: inset  0 1px 0 0 #4d73bf;
+background: #4267b2;
+border: solid 1px #4267b2;
+color: white;
+text-shadow: 0 1px 0 #3359a5;
+
+}
+.b1:hover{
+    background: red;
+
+}
+.b1:active{
+    background: yellow;
+}
+.b2{
+    background: #f6f7f9;
+    border: solid 10px #ced0d4;
+    color: #4b4f56;
+    
+}
+.b3{
+    position: relative;
+    background: orangered;
+    border: none;
+color: white;
+padding: 15px 24px;
+font-size: 1.4rem;
+box-shadow: -6px 6px 0 hsl(16, 100%,30%);
+outline: none;
+}
+/* FOR an arrow in the button----
+.b3::before{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    border: solid 6px transparent;
+    border-right: solid 6px hsl(16, 100%,30%);
+    border-left-width: 0;
+    top: 0;
+    left: -1px;
+}
+.b3::after{
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    border: solid 6px transparent;
+    border-top: solid 6px hsl(16, 100%,30%);
+    border-bottom-width: 6;
+    top: 0;
+    left: -1px;
+}   */
+
+.b3:active{
+    background: yellow;
+}
+.b3:hover{
+    background: skyblue;
+
+}
+.b4{
+    position: relative;
+background: #ecd300;
+background: -webkit-radial-gradient(hsl(54,100%,50%),hsl(54,100%,40%));
+background: -moz-radial-gradient(hsl(54,100%,50%),hsl(54,100%,40%));
+background: -moz-radial-gradient(hsl(54,100%,50%),hsl(54,100%,40%));
+background: radial-gradient(hsl(54,100%,50%),hsl(54,100%,40%));
+text-shadow: 0 -1px 0 #c3af07;
+color: white;
+border: solid 1px hsl(54, 100%, 20%);
+border-radius: 100%;
+height: 120px;
+width: 120px;
+z-index: 4;
+box-shadow: 0px 10px 0 hsl(54,100%,21%);
+}
+.b4:hover{
+    background-image: radial-gradient(violet,indigo,blue,green,yellow,orange,red) ;
+}
+.b5{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    background-color: aqua;
+    border: solid 10px transparent;
+    border-image: linear-gradient(to top right,red,orangered,yellow);
+    border-image-slice: 1;
+    color: orangered;
+    transition: all 0.3s ease-in-out;
+    
+}
+.b5:hover{
+    background-image: linear-gradient(to bottom left,skyblue,blue,indigo,purple,green);
+}
+.b6{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    background-color: royalblue;
+    border: solid 5px transparent;
+    border-image: linear-gradient(to right,orangered,yellow,transparent);
+    border-image-slice: 1;
+    color: orangered;
+    transition: all 0.3s ease-in-out;
+    
+}
+.b6:hover{
+    background-image: linear-gradient(to bottom left,lightgreen,blue,indigo,purple,green);
+}
+.b7{
+    position: relative;
+    display: inline;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    background-color: #c3af07;
+    background-image: linear-gradient(to bottom left,lightgreen,blue,indigo,purple,green);
+
+   /* background-image: url(C:\20140810_134604.jpg);*/
+   background-size: 40px 40px;
+   border: solid 1px #555;
+   color: white;
+   transition: all ease 0.3s;
+}
+.b7:hover{
+    animation: -moz-loading-button-animation 2s linear infinite;
+}
+@keyframes -moz-loading-button-animation{
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 140px 0px;
+    }
+}
+.b8{width: 15em;
+    position: relative;
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    background-color: coral;
+ /*   background-image: linear-gradient(to bottom left,lightgreen,blue,indigo,purple,green);
+*/
+   /* background-image: url(C:\20140810_134604.jpg);*/
+   background-size: 40px 40px;
+   border: solid 1px #555;
+   color: white;
+   transition: all ease 0.3s;
+}
+.b8::after{
+    position: absolute;
+    top: 60%;
+    right: 0.6em;
+    content: "Go>>";
+    transition: all ease 0.3s;
+    opacity: 0;
+}
+.b8:hover{
+    padding: 20px 60px 20px 20px;
+    background-color: chocolate;
+}
+.b8:hover::after{
+    right: 1.2em;
+    
+    opacity:1;
+}
+@keyframes -moz-loading-button-animation{
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: 140px 0px;
+    }
+}
+.t1{
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 0 0;
+}
+.t1_input{
+    display: none;
+}
+.t1_button{
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+line-height: 20px;
+text-transform: uppercase;
+background-color: #f2395a;
+border: solid 1px #f2395a;
+color: white;
+width: 80px;
+height: 30px;
+transition: all 0.3s ease;
+cursor: pointer;
+
+}
+.t1_button::before{
+    position: absolute;
+    top: 5px;
+    left: 40px;
+    content: "off";
+    display: inline-block;
+    height: 20px;
+    padding: 0 3px;
+    background: white;
+    color: #f2395a;
+    transition: all 0.3s ease;
+}
+.t1_input:checked + .t1_button{
+    background-color: green;
+    border: solid 1px green;
+}
+.t1_input:checked+ .t1_button::before{
+    left: 5px;
+    content: "on";
+    color: green;
+}
+
+.t2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 0 0;
+}
+.t2_input{
+    display: none;
+}
+.t2_button{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+line-height: 20px;
+text-transform: uppercase;
+background-color: white;
+border: solid 1px #ccc;
+padding: 5px 10px 5px 30px;
+color: #aaa;
+transition: all 0.3s ease;
+cursor: pointer;
+
+}
+.t2_button::before{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    padding: 0 3px;
+    background: #ccc;
+    transition: all 0.3s ease;
+border-radius: 100%;
+}
+.t2_input:checked + .t2_button{
+    background-color: green;
+    border: solid 1px green;
+color:white;
+}
+.t2_input:checked+ .t2_button::before{
+    
+    
+    background-color: white;
+}
+
+    	
+    </style>
+</head>
+<body>
+    <button class="b1">CURSOR</button><br><br>
+    <button class="b2">SIMPLE</button><br><br>
+    <button class="b3">3-D button</button><br><br>
+    <button class="b4">circle</button><br><br>
+    <button class="b5">border-design</button><br><br>
+    <button class="b6">Disappearing border</button><br><br>
+    <button class="b7">Animated</button><br><br>
+    <button class="b8">Scrolling</button><br><br>
+    <label for="toggle1" class="t1">
+        <input type="checkbox" id="toggle1" class="t1_input"/>
+        <span class="t1_button"></span>
+        
+    </label><br><br>
+    <label for="toggle2" class="t1">
+        <input type="checkbox" id="toggle2" class="t2_input">
+        <span class="t2_button">CLICK ME TO ACTIVATE/DEACTIVATE</span>
+    </label>
+</body>
+</html>

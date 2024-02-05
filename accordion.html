@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		ACCORDION
+	</title>
+	<link rel="stylesheet" type="text/javascript" href="E:\New folder\d\coding\html_css_js\jquery\jquery-3_5_1.js">
+	
+	<style type="text/css">
+		
+		.a{
+			position: relative;
+			display: block;
+			background-color: white;
+			border:solid 1px #e0e0e0;
+		}
+		.ai{
+			display: block;
+
+		}
+		.a .ac{
+			display: block;
+			padding: 0;
+			height: 0;
+			overflow: hidden;
+			transition: height 0.5s ease, padding 0.3s linear;
+		}
+		.a .ac p{
+			padding: 20px;
+			margin: 0;
+		}
+		.a .ac:target{
+			height: 60px;
+
+		}
+		.a .at{
+			text-decoration: none;
+		}
+		.a .att{
+			position: relative;
+			display: block;
+			margin: 0;
+padding: 10px;
+font-size: 1em;
+background: #00B3B4;
+color: white;
+border:solid 1px #379AA4;
+box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset, 0 -1px 0 rgba(255,255,255,0.1) inset, 0 4px 0 #338a94, 0 4px 2px rgba(0,0,0,0.5);
+
+		}
+		.a .att:hover{
+			background-color: #0bbfc0;
+		}
+		.a .att::after{
+			position: absolute;
+			content: "";
+			top: calc(50% - 5px);
+			right: 20px;
+			width: 7px;
+			height: 7px;
+			border-left: solid 2px white;
+			border-bottom: solid 2px white; 
+			transform: rotate(-45deg);
+		}
+	</style>
+</head>
+<body>
+<h4>CSS3 ACCORDION</h4>
+<div class="a">
+	<div class="ai">
+		<a href="#tab1" class="at att">Accordion 1...</a>
+		<div id="tab1" class="ac">
+			<p>My name is Ashutosh Kesari...However My  favourite name is Ashu Prince...My best friend is Nikita John....I call her Nikki...</p>
+		</div>
+	</div>
+	<div class="ai">
+		<a href="#tab2" class="at att">Accordion 2...</a>
+		<div id="tab2" class="ac">
+			<p>My name is Ashutosh Kesari...However My  favourite name is Ashu Prince...My best friend is Satyam Singh....I call him Sattu...</p>
+		</div>
+	</div>
+	<div class="ai">
+		<a href="#tab3" class="at att">Accordion 3...</a>
+		<div id="tab3" class="ac">
+			<p>My name is Ashutosh Kesari...However My  favourite name is Ashu Prince...My best friend is Garvit Pratap Singh....I call him Chinu...</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
